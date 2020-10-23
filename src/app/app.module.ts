@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { RoomListComponent } from './room-list/room-list.component';
 import { AboutComponent } from './about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RoomDetailComponent } from './room-detail/room-detail.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     FooterComponent,
     RoomListComponent,
-    AboutComponent
+    AboutComponent,
+    RoomDetailComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

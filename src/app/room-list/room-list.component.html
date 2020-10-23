@@ -1,1 +1,15 @@
-<p>room-list works!</p>
+<div class="row">
+  <div class="col-12 col-md-4" *ngFor="let room of rooms">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ room.imageUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">#{{room.name}}</h5>
+      <h5 class="card-text">${{room.cost}}</h5>
+
+      <p class="card-text" *ngIf="room.available; else elseBlock"><span class="badge badge-success">Available</span></p>
+      <ng-template #elseBlock><p class="card-text"><span class="badge badge-danger">Booked</span></p></ng-template>
+      <a href="#" class="btn btn-primary">Book</a>
+    </div>
+  </div>
+  </div>
+</div>
