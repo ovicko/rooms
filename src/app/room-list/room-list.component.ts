@@ -13,7 +13,7 @@ export class RoomListComponent implements OnInit {
 
   ngOnInit(): void {
     this.rooms = ROOMS;
-    console.table(this.rooms)
+    // console.table(this.rooms)
   }
 
 }

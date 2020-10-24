@@ -1,1 +1,16 @@
-<p>room-detail works!</p>
+<div class="row">
+  <div class="col-12 col-md-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{room.name}}</h5>
+        <p class="card-text">${{room.cost}}</p>
+        <p class="card-text">{{room.location}}</p>
+        <p class="card-text" *ngIf="room.available; else elseBlock">
+          <span class="badge badge-success">Available</span></p>
+        <ng-template #elseBlock>
+          <p class="card-text"><span class="badge badge-danger">Booked</span></p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

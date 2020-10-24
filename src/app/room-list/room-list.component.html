@@ -6,9 +6,11 @@
       <h5 class="card-title">#{{room.name}}</h5>
       <h5 class="card-text">${{room.cost}}</h5>
 
-      <p class="card-text" *ngIf="room.available; else elseBlock"><span class="badge badge-success">Available</span></p>
-      <ng-template #elseBlock><p class="card-text"><span class="badge badge-danger">Booked</span></p></ng-template>
-      <a href="#" class="btn btn-primary">Book</a>
+      <p class="card-text" *ngIf="room.available; else elseBlock">
+        <span class="badge badge-success">Available</span></p>
+      <ng-template #elseBlock><p class="card-text"><span class="badge badge-danger">Booked</span></p>
+      </ng-template>
+      <a [routerLink]="['/rooms/',room.id]"  class="btn btn-primary">Book</a>
     </div>
   </div>
   </div>
